@@ -1,0 +1,186 @@
+@media (min-width: 300px) {
+
+  .mastTitle {
+    height: 10%;
+    position: absolute;
+    bottom: 150px;
+    left: 20vw;
+    font-size: 6vh;
+  }
+  .mastTitle-2 {
+    text-align: left;
+    height: 10%;
+    position: absolute;
+    bottom: 70px;
+    left: 20vw;
+    font-size: 3vh;
+    opacity: 0.8;
+  }
+  .mastTitle-sub{
+    height:10%;
+    position:absolute;
+    top:35px;
+    left:4vh;
+    font-size:5vh
+  }
+  .mastTitle-sub-2{
+    height:10%;
+    position:absolute;
+    left:4vh;
+    font-size:2.3vh;
+    opacity:0.8;
+    top:95px
+  }
+
+  nav.navbar{
+
+    padding-left:4vh;
+  }
+  .top.active{
+    color: var(--green) !important;
+  }
+}
+@media (min-width: 768px) {
+
+  .mastTitle{
+    height:10%;
+    position:absolute;
+    bottom:110px;
+    left:20vw;
+    font-size:5vh
+  }
+  .mastTitle-2{
+    height:10%;
+    position:absolute;
+    bottom:40px;
+    left:20vw;
+    font-size:2.3vh;
+    opacity:0.8;
+  }
+  .mastTitle-sub{
+    height:10%;
+    position:absolute;
+    top:35px;
+    left:40vh;
+    font-size:5vh
+  }
+  .mastTitle-sub-2{
+    height:10%;
+    position:absolute;
+    left:40vh;
+    font-size:2.3vh;
+    opacity:0.8;
+    top:95px
+  }
+
+  nav.navbar{
+
+    padding-left:4vh;
+  }
+  .top.active{
+    color: var(--green) !important;
+  }
+}
+@media (min-width: 1024px) {
+
+  .mastTitle{
+    height:10%;
+    position:absolute;
+    bottom:110px;
+    left:4vh;
+    font-size:5vh
+  }
+  .mastTitle-2{
+    height:10%;
+    position:absolute;
+    bottom:40px;
+    left:4vh;
+    font-size:2.3vh;
+    opacity:0.8;
+  }
+  .mastTitle-sub{
+    height:10%;
+    position:absolute;
+    top:8vh;
+    left:4vh;
+    font-size:5vh
+  }
+  .mastTitle-sub-2{
+    height:10%;
+    position:absolute;
+    left:4vh;
+    font-size:2.3vh;
+    opacity:0.8;
+    top:14vh;
+  }
+
+  nav.navbar{
+
+    padding-left:4vh;
+  }
+  .top.active{
+    color: var(--green) !important;
+  }
+}
+@media (min-width: 1200px) {
+
+  .mastTitle {
+    height: 10%;
+    position: absolute;
+    bottom: 250px;
+    left: 40vh;
+    font-size: 7vh;
+  }
+  .mastTitle-2 {
+    height: 10%;
+    position: absolute;
+    bottom: 150px;
+    left: 40vh;
+    font-size: 3vh;
+    opacity: 0.8;
+  }
+  .mastTitle-sub{
+    height:10%;
+    position:absolute;
+    top:35px;
+    left:40vh;
+    font-size:5vh
+  }
+  .mastTitle-sub-2{
+    height:10%;
+    position:absolute;
+    left:40vh;
+    font-size:2.3vh;
+    opacity:0.8;
+    top:95px
+  }
+
+  nav.navbar{
+    padding-left:40vh;
+  }
+  .top.active{
+    color: var(--green) !important;
+  }
+}
+
+.masthead{
+  margin-bottom:0;
+  height: 85vh;
+  overflow: hidden;
+  font-family:lato;
+  font-style:normal;
+  background-image: url('https://ymath.io/backsplash.jpg');
+  background-size: auto 120vh;
+  background-attachment:fixed
+}
+.masthead-sub{
+  margin-bottom:0;
+  height: 20vh;
+  overflow: auto;
+  font-family:lato;
+  font-style:normal;
+  background-image: url('https://ymath.io/backsplash.jpg');
+  background-size: 100vw auto;
+  background-attachment:fixed
+}
+
