@@ -1,0 +1,60 @@
+[
+  {
+    "name": "courses",
+    "path": "/courses",
+    "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/courses/index.vue",
+    "chunkName": "pages/courses/index",
+    "_name": "_7ca63dd8"
+  },
+  {
+    "path": "/courses/:course",
+    "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/courses/_course.vue",
+    "chunkName": "pages/courses/_course",
+    "children": [
+      {
+        "name": "courses-course",
+        "path": "",
+        "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/courses/_course/index.vue",
+        "chunkName": "pages/courses/_course/index",
+        "_name": "_1e91d143"
+      },
+      {
+        "path": ":unit",
+        "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/courses/_course/_unit.vue",
+        "chunkName": "pages/courses/_course/_unit",
+        "children": [
+          {
+            "name": "courses-course-unit",
+            "path": "",
+            "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/courses/_course/_unit/index.vue",
+            "chunkName": "pages/courses/_course/_unit/index",
+            "_name": "_51e0fc52"
+          },
+          {
+            "name": "courses-course-unit-lesson",
+            "path": ":lesson",
+            "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/courses/_course/_unit/_lesson.vue",
+            "chunkName": "pages/courses/_course/_unit/_lesson",
+            "_name": "_4024919c"
+          }
+        ],
+        "_name": "_42a70a54"
+      }
+    ],
+    "_name": "_9f774a80"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2f4f1f22"
+  },
+  {
+    "name": "slug",
+    "path": "/:slug",
+    "component": "/Users/saumyasinghal/WebstormProjects/ymath-2/pages/_slug.vue",
+    "chunkName": "pages/_slug",
+    "_name": "_32bc61b2"
+  }
+]

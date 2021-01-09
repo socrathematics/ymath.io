@@ -1,14 +1,19 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'ymath-2',
+    htmlAttrs:{
+      class: 'bg-light'
+    },
+    title: 'YMath.io',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      {rel:'stylesheet', href:'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'},
+      {rel:'stylesheet', href:'/style.css'}
     ]
   },
 
@@ -19,7 +24,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '@/plugins/vuesax'
+    {src:'@/plugins/vuesax', mode:'client', srr:false}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -45,9 +50,22 @@ export default {
   axios: {},
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: [
+        'remark-math'
+      ],
+      rehypePlugins: [
+        'rehype-katex'
+      ]
+    }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+  server:{
+    host:'0.0.0.0',
+    port:process.env.PORT
   }
 }

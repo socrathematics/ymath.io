@@ -1,0 +1,26 @@
+{
+  "MutliPractice": {
+    "description": "Auto imported from components/global/mutli-practice.vue"
+  },
+  "LazyMutliPractice": {
+    "description": "Auto imported from components/global/mutli-practice.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "LazyLogo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "VuesaxLogo": {
+    "description": "Auto imported from components/VuesaxLogo.vue"
+  },
+  "LazyVuesaxLogo": {
+    "description": "Auto imported from components/VuesaxLogo.vue"
+  },
+  "TopBar": {
+    "description": "Auto imported from components/top-bar.vue"
+  },
+  "LazyTopBar": {
+    "description": "Auto imported from components/top-bar.vue"
+  }
+}

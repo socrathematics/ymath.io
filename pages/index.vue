@@ -1,26 +1,33 @@
 <template>
-  <div>
-    <vs-navbar center-collapsed >
-      <template #left>
-        <img src="/favicon.png" alt="">
+  <div >
+    <client-only>
+    <top-bar></top-bar>
+    <vs-card style="margin-top: 6em">
+      <template #title>
+        <h3>Pot with a plant</h3>
       </template>
-      <vs-navbar-item  id="guide">
-        Guide
-      </vs-navbar-item>
-      <vs-navbar-item id="docs">
-        Documents
-      </vs-navbar-item>
-      <vs-navbar-item  id="components">
-        Components
-      </vs-navbar-item>
-      <vs-navbar-item id="license">
-        license
-      </vs-navbar-item>
-      <template #right>
-        <vs-button flat >Login</vs-button>
-        <vs-button>Get Started</vs-button>
+      <template #img>
+        <img src="/foto5.png" alt="">
       </template>
-    </vs-navbar>
+      <template #text>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+      </template>
+      <template #interactions>
+        <vs-button danger icon>
+          <i class='bx bx-heart'></i>
+        </vs-button>
+        <vs-button class="btn-chat" shadow primary>
+
+          <i class='bx bx-chat' ></i>
+          <span class="span">
+          54
+        </span>
+        </vs-button>
+      </template>
+    </vs-card>
+    </client-only>
   </div>
 </template>
 

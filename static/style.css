@@ -72,10 +72,8 @@
   width: 50%;
   text-align: center;
 }
-body {
-  font-family:lato;
-}
-.attr {font-family:dancing;}
+
+
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
@@ -441,6 +439,20 @@ body{
   outline:none !important;
   height:initial;
 
+}
+
+.vs-sidebar-content {
+  background-color: transparent !important;
+  background-image: url('/backsplash.jpg');
+  background-size: auto 60%;
+}
+
+.vs-sidebar, .vs-sidebar__footer{
+  background: rgba(var(--vs-background), 1)
+}
+
+.vs-sidebar__footer{
+  border-bottom-right-radius: 30px
 }
 
 .answerb{
