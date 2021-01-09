@@ -61,3 +61,30 @@ Notice that the graphed function is linear. What linear function does it look li
 
 <mutli-practice :options="['y=x^2-1','y=x+1','y=x','y=x-1']" correct="1" ></mutli-practice>
 
+The function covers _almost all_ points covered by the function $x+1$.
+
+We can confirm this by performing the following operation:
+
+$$
+\frac{x^2-1}{x-1} = \frac{(x-1)(x+1)}{x-1} = x+1
+$$
+
+Now try this: 
+
+$$
+\lim_{x\to 2} \frac{x^2-5x+6}{x-2}.
+$$
+
+<mutli-practice :options="['-2','-1','0','1', '2']" correct="1" ></mutli-practice>
+
+As we said before, it is okay to divide by non-constants in limits. So, we can say
+
+$$
+\lim_{x\to 2} \frac{x^2-5x+6}{x-2} = \lim_{x\to 2} x-3.
+$$
+
+We can just plug in $x=2$ here to find 
+
+$$
+\lim_{x\to 2} \frac{x^2-5x+6}{x-2} = -1.
+$$
