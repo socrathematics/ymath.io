@@ -104,7 +104,7 @@ export default {
 
 <style>
 .katex-html{
-  display: none;
+  /*display: none;*/
 }
 .vs-sidebar-content {
   background-color: transparent !important;

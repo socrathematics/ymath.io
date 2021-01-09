@@ -1,6 +1,7 @@
 {
   "name": "ymath-2",
   "short_name": "ymath-2",
+  "description": "## Build Setup",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.5f6a36.png",

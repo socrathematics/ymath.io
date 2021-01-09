@@ -65,7 +65,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"htmlAttrs":{"class":"bg-light"},"title":"YMath.io","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fboxicons@2.0.7\u002Fcss\u002Fboxicons.min.css"},{"rel":"stylesheet","href":"\u002Fstyle.css"}],"style":[],"script":[]},
+    head: {"htmlAttrs":{"class":"bg-light"},"title":"YMath.io","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.png"},{"rel":"stylesheet","href":"https:\u002F\u002Funpkg.com\u002Fboxicons@2.0.7\u002Fcss\u002Fboxicons.min.css"},{"rel":"stylesheet","href":"\u002Fstyle.css"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fkatex@0.12.0\u002Fdist\u002Fkatex.min.css"}],"style":[],"script":[]},
 
     router,
     nuxt: {

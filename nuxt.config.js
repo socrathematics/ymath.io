@@ -13,8 +13,14 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {rel:'stylesheet', href:'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'},
-      {rel:'stylesheet', href:'/style.css'}
-    ]
+      {rel:'stylesheet', href:'/style.css'},
+      {rel:'stylesheet', href:'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css'}
+    ]/*,
+    script:[
+      {
+        src:'https://fred-wang.github.io/mathjax.js/mpadded-min.js', type:'text/javascript'
+      }
+    ]*/
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
