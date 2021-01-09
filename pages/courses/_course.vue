@@ -119,4 +119,8 @@ export default {
 .vs-sidebar__footer{
   border-bottom-right-radius: 30px
 }
+.graph {
+	height: 500px;
+	width: 500px;
+}
 </style>
