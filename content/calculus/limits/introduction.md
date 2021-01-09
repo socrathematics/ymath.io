@@ -31,3 +31,7 @@ $$
 In fact, the function is defined for any $x\pm \delta,$ where $\delta \neq 0.$
 
 In this lesson, we'll be considering the case where $\delta$ is very close, but not equal to $0.$
+
+
+<iframe src="https://www.desmos.com/calculator/ti0fuxp3s6?embed" class="graph" style="border: 1px solid #ccc" id="graph1" frameborder="0"></iframe>
+
