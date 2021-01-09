@@ -1,7 +1,7 @@
 <template>
 <div>
   <client-only><vs-row><vs-select :state="value===''?'':(correct==value?'success':'danger')" placeholder="Select" v-model="value">
-    <vs-option v-for="(opt, index) of options" :label="opt" :key="index" :value="index">
+    <vs-option v-for="(opt, ind) of options" :label="opt" :key="ind" :value="ind">
       {{opt}}
     </vs-option>
   </vs-select></vs-row></client-only>
@@ -12,12 +12,12 @@
 <script>
 export default {
 name: "mutli-practice",
+  props:[
+    'options',
+    'correct'
+  ],
   data:()=>({
-    value:'',
-    options:[
-      '0','1','indeterminate','infinity'
-    ],
-    correct:'2'
+    value:''
   })
 }
 </script>
