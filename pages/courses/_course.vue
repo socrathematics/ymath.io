@@ -97,7 +97,8 @@ export default {
       }
       return f
     }
-  }
+  },
+  scrollToTop: true
 
 }
 </script>

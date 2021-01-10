@@ -19,7 +19,8 @@ export default {
     return {
       page, p:page.index
     }
-  }
+  },
+  scrollToTop: true
 }
 </script>
 
