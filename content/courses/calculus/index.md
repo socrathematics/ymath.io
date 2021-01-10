@@ -1,6 +1,8 @@
 ---
 title: Calculus
 course: Calculus
+index: 0
+description: Equip yourself with Calculus - it's not scary.
 ---
 
 So you want to learn Calculus? Well, this is definitely a try-this-at-home type of thing to do. But first, you're going to need the following materials:

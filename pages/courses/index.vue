@@ -3,16 +3,16 @@
   <top-bar></top-bar>
   <h1>Course Catalog</h1>
   <client-only>
-    <vs-card >
+    <vs-card :key="ind" v-for="({title, description, path}, ind) of courses">
       <template #title>
-        <h3>Pot with a plant</h3>
+        <h3>{{ title}}</h3>
       </template>
       <template #img>
         <img src="/foto5.png" alt="">
       </template>
       <template #text>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          {{description}}
         </p>
       </template>
       <template #interactions>
@@ -29,6 +29,7 @@
       </template>
     </vs-card>
   </client-only>
+
 </div>
 </template>
 
@@ -38,7 +39,8 @@ name: "index",
   async asyncData({ params, $content, error }) {
   // fetch all of the something.* ig...
     // gonna have to move the courses into their own folder ;)
-  return {}
+    const courses = await $content('courses',{deep: true}).where({ index: 0 }).only(['title','description']).fetch();
+  return {courses}
   }
 }
 </script>

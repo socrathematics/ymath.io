@@ -115,6 +115,11 @@ export default {
   background-size: auto 60%;
 }
 
+.vs-sidebar-content .vs-sidebar__logo img {
+  max-width: 120px;
+  max-height: 50px !important;
+}
+
 .vs-sidebar, .vs-sidebar__footer{
   background: rgba(var(--vs-background), 1)
 }

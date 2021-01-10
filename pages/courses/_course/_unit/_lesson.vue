@@ -1,6 +1,7 @@
 <template>
 <div>
   <h2>{{page.title}}</h2>
+
   <nuxt-content :document="page" />
   <div class="center " style="margin-top: 3em">
     <vs-pagination v-model="p" :length="5" />
