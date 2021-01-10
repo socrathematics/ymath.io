@@ -9,7 +9,7 @@
 export default {
 name: "index",
   async asyncData ({ $content, params, error }) {
-    const page = await $content(params.course+'*').fetch().catch((err) => {
+    const page = await $content('courses/'+params.course+'/index').fetch().catch((err) => {
       error({ statusCode: 404, message: 'Page not found' })
     })
 

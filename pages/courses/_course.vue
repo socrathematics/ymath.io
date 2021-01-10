@@ -71,11 +71,11 @@ export default {
   }),
   async asyncData({ params, $content, error }) {
 
-    const {title} = await $content(params.course+'*').only(['title'])
+    const {title} = await $content('courses/'+params.course+'/index').only(['title'])
       .fetch().catch((err) => {
         error({ statusCode: 404, message: 'Page not found' })
       })
-    const children = await $content(params.course, { deep: true}).sortBy('index').fetch()
+    const children = await $content('courses',params.course, { deep: true}).sortBy('index').fetch()
     //const course = params.course // When calling /abc the slug will be "abc"
     return {  title, params,  children, active:`/courses/${params.course}/${params.unit}/${params.lesson}` }
   },
@@ -87,7 +87,9 @@ export default {
       for (const {title, path, unit} of c){
         //console.log(title)
         let s = path.split('/');
-        s.shift();s.shift()
+        console.log(path);
+        if (s.length===4) continue;
+        s.shift();s.shift();s.shift()
         //console.log(s)
         // see if s[0] is a valid 'path' attribute in any of them
         let a = f.filter(a=>a.path===s[0])[0];

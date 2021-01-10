@@ -11,7 +11,7 @@
 <script>
 export default {
   async asyncData ({ $content, params, error }) {
-    const page = await $content(params.course, params.unit, params.lesson).fetch().catch((err) => {
+    const page = await $content('courses',params.course, params.unit, params.lesson).fetch().catch((err) => {
       error({ statusCode: 404, message: 'Page not found' })
     })
     //console.log(page)
