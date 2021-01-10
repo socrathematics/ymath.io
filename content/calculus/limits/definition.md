@@ -41,3 +41,5 @@ Think of $\delta$ as a car traveling towards $0$. As $\delta$ gets closer and cl
 So, if $\delta$ was infinitesimally small, then $f(\delta)$ would pretty much equal that destination.
 
 Hence, we can substitute $\delta$ for some infinitesimally small value, and easily see what the function evaluates to.
+
+However, we must be careful: For example, we know that it's okay to divide by our nonzero , but how do we do it? How can we divide by an infinitesimally small number?
