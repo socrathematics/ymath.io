@@ -1,15 +1,16 @@
 <template>
 <div style="margin-top:5em;padding:2em 1em">
-  <top-bar></top-bar>
+  <top-bar :slug="slug"></top-bar>
   <h1>Course Catalog</h1>
   <client-only>
-    <vs-card :key="ind" v-for="({title, description, path}, ind) of courses">
+
+    <vs-card type="1" :key="ind"  v-for="({title, description, path, thumbnail}, ind) of courses">
       <template #title>
         <h3>{{ title}}</h3>
       </template>
       <template #img>
-        <img src="/foto5.png" alt="">
-      </template>
+        <nuxt-link style="text-decoration: none"  :to="'/courses/'+path.split('/')[2]"><img :src="thumbnail" alt="">
+        </nuxt-link></template>
       <template #text>
         <p>
           {{description}}
@@ -36,11 +37,12 @@
 <script>
 export default {
 name: "index",
-  async asyncData({ params, $content, error }) {
+  async asyncData({ params, $content, error, route }) {
   // fetch all of the something.* ig...
+
     // gonna have to move the courses into their own folder ;)
-    const courses = await $content('courses',{deep: true}).where({ index: 0 }).only(['title','description']).fetch();
-  return {courses}
+    const courses = await $content('courses',{deep: true}).where({ index: 0 }).only(['title','description','thumbnail']).fetch();
+  return {courses, slug:route.path}
   }
 }
 </script>
