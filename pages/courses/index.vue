@@ -41,7 +41,7 @@ name: "index",
   // fetch all of the something.* ig...
 
     // gonna have to move the courses into their own folder ;)
-    const courses = await $content('courses',{deep: true}).where({ index: 0 }).only(['title','description','thumbnail']).fetch();
+    const courses = await $content('courses',{deep: true}).where({ index: 0 }).only(['title','description','thumbnail','path']).fetch();
   return {courses, slug:route.path}
   }
 }
