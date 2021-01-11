@@ -14,7 +14,7 @@
         </template>
         <template  #logo>
           <!-- ...img logo -->
-          <img style="border-radius: 5px" src="/favicon.png">
+          <nuxt-link to="/"><img style="border-radius: 5px" src="/favicon.png"></nuxt-link>
         </template>
         <vs-sidebar-item :id="`/courses/${params.course}`" :to="`/courses/${params.course}`">
           <template #icon>

@@ -40,7 +40,7 @@ name: "index",
   async asyncData({ params, $content, error, route }) {
   // fetch all of the something.* ig...
 
-    // gonna have to move the courses into their own folder ;)
+    // gonna have to move the courses into their own folder ;) -- done
     const courses = await $content('courses',{deep: true}).where({ index: 0 }).only(['title','description','thumbnail','path']).fetch();
   return {courses, slug:route.path}
   }
