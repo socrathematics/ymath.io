@@ -73,5 +73,33 @@ export default {
   server:{
     host:'0.0.0.0',
     port:process.env.PORT
-  }
+  },
+  hooks: {
+    // Doc: https://content.nuxtjs.org/advanced#contentfilebeforeinsert
+    'content:file:beforeInsert': async (document, database) => {
+      // search for markdown containing
+      // only `specialNotice` property.
+      //console.log('the document ',document.text) // should exist
+      if (document.extension === '.md' &&
+        document.sections) {
+        // Replace Markdown string in database
+        // with the JSON ATS version
+        const a = document.text;
+        const b = a.split('[begin]');
+        b.shift();
+
+        let c = b.map(k=> k.split('[end]'));
+
+        c = c.map(k=>k.map(l=>l.trim()));
+        const data = c.map(k=>{k[1]=k[1].slice(1,-1).split(','); return k}).map(v=>({text:v[0],options:v[1]}));
+        for (let i=0; i<data.length; i++) {
+          data[i].text = await database
+            .markdown
+            .toJSON(data[i].text)
+        }
+        document.sections = data;
+
+      }
+    }
+  },
 }

@@ -3,7 +3,9 @@ course: Calculus
 unit: Limits
 title: Introduction to Limits
 index: 1
+sections: true
 ---
+[begin]
 
 Limits are the basis for almost everything in calculus. By the time you get to
 derivatives, you'll be doing limits and you won't even know it. To become
@@ -14,8 +16,12 @@ f(x) = \frac{x^2-1}{x-1}.
 $$
 What is the value of this function at $x=1$? 
 
-<mutli-practice :options="['0','1','indeterminate','infinity']" correct="3" ></mutli-practice>
 
+[end]
+
+<3,0,1,indeterminate,infinity>
+
+[begin]
 
 $\frac{0}{0}$ is indeterminate, so the function $f(x)$ would be indeterminate at $x=1$. 
 However, the function is defined at $x=0.9$ and $x=1.1$: 
@@ -59,7 +65,13 @@ This does not mean that $f(1)=2$ , but rather that if $x$ is very close to $1$, 
 Notice that the graphed function is linear. What linear function does it look like?
 
 
-<mutli-practice :options="['y=x^2-1','y=x+1','y=x','y=x-1']" correct="2" ></mutli-practice>
+
+
+[end]
+
+<2,y=x^2-1,y=x+1,y=x,y=x-1>
+
+[begin]
 
 The function covers _almost all_ points covered by the function $x+1$.
 
@@ -75,7 +87,12 @@ $$
 \lim_{x\to 2} \frac{x^2-5x+6}{x-2}.
 $$
 
-<mutli-practice :options="['-2','-1','0','1', '2']" correct="2" ></mutli-practice>
+
+[end]
+
+<2,-2,-1,0,1,2>
+
+[begin]
 
 As we said before, it is okay to divide by non-constants in limits. So, we can say
 
@@ -88,3 +105,5 @@ We can just plug in $x=2$ here to find
 $$
 \lim_{x\to 2} \frac{x^2-5x+6}{x-2} = -1.
 $$
+
+[end]
