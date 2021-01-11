@@ -8,13 +8,10 @@
 
       <div v-if="options.length > 2"> <mutli-practice v-model="answers[index]" :options="options.slice(1)" :correct="options[0]"></mutli-practice></div>
     </div>
-
   </div></div>
   <div v-else>
     <nuxt-content :document="page"></nuxt-content>
   </div>
-
-
   <div class="center " style="margin-top: 3em">
     <vs-pagination v-model="p" :length="5" />
   </div>
