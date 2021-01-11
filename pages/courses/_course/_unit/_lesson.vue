@@ -52,6 +52,7 @@ export default {
       if (!n) return;
       // find the first occurrence of non truthy, and fill() the rest with false
       const i =  n.indexOf(false);
+      if (i===-1) return;
       //console.log('first occurrence ',i)
       this.answers = this.answers.fill(false,i)
 
