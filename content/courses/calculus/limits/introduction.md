@@ -56,7 +56,7 @@ $$
 \lim_{x\to 1} f(x) = 2.
 $$
 
-The english for this is "As $x$ approaches 1, $f(x)$ approaches $2$."
+The English for this is "As $x$ approaches 1, $f(x)$ approaches $2$."
 
 Another possible interpretation is "The limit of $f(x)$ as $x$ approaches 1 is $2$."
 
