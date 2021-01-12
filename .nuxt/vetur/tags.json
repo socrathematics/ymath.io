@@ -1,4 +1,10 @@
 {
+  "SocialHead": {
+    "description": "Auto imported from components/global/SocialHead.vue"
+  },
+  "LazySocialHead": {
+    "description": "Auto imported from components/global/SocialHead.vue"
+  },
   "MutliPractice": {
     "description": "Auto imported from components/global/mutli-practice.vue"
   },

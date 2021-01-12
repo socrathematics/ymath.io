@@ -1,11 +1,14 @@
 <template>
 <div style="margin-top:6em;padding:2em 1em">
+  <social-head
+    :description="description"
+    :title="`${title}${lessontitle? ' • '+unittitle:''} | YMath.io`"
+    :image="thumbnail"
+  ></social-head>
   <ClientOnly>
       <vs-sidebar
         background="primary"
         textWhite
-
-
         v-model="active"
         open
       >
@@ -22,9 +25,9 @@
           </template>
           Home
         </vs-sidebar-item>
-        <vs-sidebar-group :key="undex" v-for="(unit, undex) of contents">
+        <vs-sidebar-group :open="params.unit===unit" :key="undex" v-for="(unit, undex) of contents">
           <template #header>
-            <vs-sidebar-item :active="unit.path===params.unit" arrow>
+            <vs-sidebar-item :active="unit.path===params.unit"  arrow>
               <template #icon>
                 <i :class='`bx bx-circle`'></i>
               </template>
@@ -71,13 +74,26 @@ export default {
   }),
   async asyncData({ params, $content, error }) {
 
-    const {title} = await $content('courses/'+params.course+'/index').only(['title'])
+    const {title, description, thumbnail} = await $content('courses/'+params.course+'/index').only(['title','description','thumbnail'])
       .fetch().catch((err) => {
         error({ statusCode: 404, message: 'Page not found' })
       })
+
     const children = await $content('courses',params.course, { deep: true}).sortBy('index').fetch()
     //const course = params.course // When calling /abc the slug will be "abc"
-    return {  title, params,  children, active:`/courses/${params.course}/${params.unit}/${params.lesson}` }
+    let lessontitle;
+    let unittitle;
+    if (params.lesson){
+      const ob = children.filter(function ({path}) {
+        const a = path.split('/');
+        return params.lesson === a[a.length - 1]
+      })[0]
+
+      lessontitle = ob.title
+      unittitle = ob.unit
+
+    }
+    return { lessontitle, unittitle, title, description, thumbnail, params,  children, active:`/courses/${params.course}/${params.unit}/${params.lesson}` }
   },
   computed:{
     contents(){
