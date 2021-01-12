@@ -14,7 +14,7 @@ title: Getting started
 
 This metadata is mandatory and should be placed at the top of the file, like this:
 
-#### /content/courses/pineapple-pizza.md
+#### /content/courses/pineapple-pizza/index.md
 
 ```markdown
 ---
