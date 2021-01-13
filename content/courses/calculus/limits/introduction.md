@@ -81,7 +81,7 @@ $$
 \frac{x^2-1}{x-1} = \frac{(x-1)(x+1)}{x-1} = x+1
 $$
 
-> Important! This kind of math is only allowed in limits. Notice how we divided the top and bottom of the fraction by $x-1$, a non-constant – we only did this knowing that $x$ is very close to, but not equal to 1.
+> **Important!** This kind of math is only allowed in limits. Notice how we divided the top and bottom of the fraction by $x-1$, a non-constant – we only did this knowing that $x$ is very close to, but not equal to 1.
 
 Now try this: 
 
