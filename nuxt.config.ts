@@ -1,3 +1,5 @@
+//import { Configuration, NuxtConfig } from '@nuxt/types/config'
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -12,10 +14,10 @@ export default {
       { hid: 'og:site_name', name: 'og:site_name', content: 'YMath.io' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      {rel:'stylesheet', href:'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'},
-      {rel:'stylesheet', href:'/style.css'},
-      {rel:'stylesheet', href:'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css'}
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { rel:'stylesheet', href:'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'},
+      { rel:'stylesheet', href:'/style.css'},
+      { rel:'stylesheet', href:'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css'}
     ]/*,
     script:[
       {
@@ -77,22 +79,23 @@ export default {
   },
   hooks: {
     // Doc: https://content.nuxtjs.org/advanced#contentfilebeforeinsert
-    'content:file:beforeInsert': async (document, database) => {
+    'content:file:beforeInsert': async (document: { extension: string; sections: any; text: any; }, database: { markdown: { toJSON: (arg0: any) => any; }; }) => {
       // search for markdown containing
-      // only `specialNotice` property.
+      // only `sections` property.
       //console.log('the document ',document.text) // should exist
       if (document.extension === '.md' &&
         document.sections) {
         // Replace Markdown string in database
-        // with the JSON ATS version
+        // with the JSON AST version
         const a = document.text;
         const b = a.split('[begin]');
         b.shift();
 
-        let c = b.map(k=> k.split('[end]'));
+        let c = b.map((k: string)=> k.split('[end]'));
 
-        c = c.map(k=>k.map(l=>l.trim()));
-        const data = c.map(k=>{k[1]=k[1].slice(1,-1).split(','); return k}).map(v=>({text:v[0],options:v[1]}));
+        c = c.map((k: string[])=>k.map(l=>l.trim()));
+        const data = c.map((k: string[])=>{// @ts-ignore
+          k[1]=k[1].slice(1,-1).split(','); return k}).map(v=>({text:v[0],options:v[1]}));
         for (let i=0; i<data.length; i++) {
           data[i].text = await database
             .markdown
