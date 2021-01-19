@@ -13,6 +13,3 @@ This course covers a wide range of difficulties, so you may need to skip over th
 * If you're studying pre-algebra, start at the beginning.
 * If you're learning algebra 1, you should begin somewhere in the middle of the exponents course.
 * If you're in algebra 2, you should go to the logarithms unit.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MjQ1MjcwNywtMTY0ODgxMzk1Nl19
--->
