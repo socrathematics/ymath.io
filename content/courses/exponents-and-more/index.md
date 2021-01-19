@@ -1,6 +1,9 @@
 ---
-
-
+title: Exponents and More
+course: Exponents and More
+index: 0
+description: Master the most efficient computation since multiplication!
+thumbnail: /img/exponents.jpg
 ---
 
 <hr>
@@ -19,5 +22,5 @@ This course covers a wide range of difficulties, so you may need to skip over th
 </ul>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NjcxOTgwMl19
+eyJoaXN0b3J5IjpbLTE2NDg4MTM5NTZdfQ==
 -->
