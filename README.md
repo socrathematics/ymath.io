@@ -1,5 +1,7 @@
 # ymath-2
 
+This was a failed attempt at making a ymath redesign. I made bad software choices. See https://github.com/ymath-io/ymath.io for the functional redesign.
+
 ## Build Setup
 
 ```bash
